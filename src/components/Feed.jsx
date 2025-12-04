@@ -11,7 +11,7 @@ const Feed = () => {
   const fetchFeed = async () => {
     if (feed.length>0) return; // ensure feed loads only once
     try {
-      const res = await axios.get("http://localhost:8000/users/feed", {
+      const res = await axios.get("https://devlink-backend-zt4c.onrender.com/users/feed", {
         withCredentials: true,
       });
       dispatch(addFeed(res.data.feedusers));
