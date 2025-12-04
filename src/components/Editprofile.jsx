@@ -40,7 +40,7 @@ const EditProfile = () => {
     try {
       // API call
       const res = await axios.patch(
-        "http://localhost:8000/profile/edit",
+        "https://devlink-backend-zt4c.onrender.com/profile/edit",
         updatedData,
         { withCredentials: true }
       );
