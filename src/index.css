@@ -1,17 +1,17 @@
-
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 40px;
-  background-color: #F4E8FF; /* Soft lavender */
+  padding: 14px 20px;
+  background-color: #F4E8FF;
   border-bottom: 1px solid #e9e9e9;
   position: fixed;
-  width: 100%;
   top: 0;
-  z-index: 20;
+  width: 100%;
+  z-index: 9999;
 }
 
+/* LEFT SECTION */
 .left {
   display: flex;
   align-items: center;
@@ -28,6 +28,7 @@
   color: #5A2AE0;
 }
 
+/* DESKTOP NAV LINKS */
 .links a {
   margin: 0 16px;
   text-decoration: none;
@@ -40,20 +41,13 @@
   color: #7A43FF;
 }
 
-.signup {
-  background: linear-gradient(90deg, #6B4EFF, #5A2AE0);
-  color: white;
-  padding: 7px 18px;
-  border-radius: 8px;
-  border: none;
-  font-weight: 600;
-  transition: 0.3s;
+/* LOGIN BUTTON CONTAINER */
+.buttons {
+  display: flex;
+  align-items: center;
 }
 
-.signup:hover {
-  opacity: 0.85;
-}
-
+/* LOGIN BUTTON */
 .login {
   background-color: #fff;
   color: #5A2AE0;
@@ -61,7 +55,6 @@
   border-radius: 8px;
   border: 2px solid #5A2AE0;
   font-weight: 600;
-
   transition: 0.3s;
 }
 
@@ -70,15 +63,18 @@
   color: white;
 }
 
+/* HAMBURGER ICON */
 .hamburger {
-  font-size: 28px;
+  font-size: 30px;
   cursor: pointer;
-  display: none;
+  display: none;        /* hidden on desktop */
   color: #5A2AE0;
+  z-index: 10000;
 }
 
+/* MOBILE MENU */
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   top: 70px;
   right: 20px;
   background: #f4f0ff;
@@ -88,6 +84,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
+  z-index: 15000;
 }
 
 .mobile-menu a {
@@ -97,36 +94,22 @@
   font-weight: 500;
 }
 
-@media (max-width: 993px) {
-  .links,
+/* ⛔ THE IMPORTANT PART WARNING */
+/* Many phones + Render stretch layouts.  
+   So we set mobile mode at width < 1024px, not 768px */
+@media (max-width: 1024px) {
+  .links {
+    display: none !important;
+  }
+
   .buttons {
-    display: none;
+    display: none !important;
   }
 
   .hamburger {
-    display: block;
+    display: block !important;
   }
 }
-
-
-header,
-.header {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0;
-  width: 100%;
-  z-index: 99999 !important;
-  background-color: #F4E8FF; 
-}
-
-body {
-  padding-top: 90px !important; /* push page down below header */
-}
-.hamburger {
-  display: block !important;
-  z-index: 100000 !important;
-}
-
 /* ------------------ HERO ------------------ */
 
 .hero-container {
