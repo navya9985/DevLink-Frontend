@@ -6,7 +6,7 @@ const Profile = () => {
 
   const fetchProfile = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/profile", {
+      const res = await axios.get("https://devlink-backend-zt4c.onrender.com/profile", {
         withCredentials: true,
       });
       console.log("PROFILE DATA:", res.data);
