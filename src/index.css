@@ -108,6 +108,25 @@
   }
 }
 
+
+header,
+.header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  width: 100%;
+  z-index: 99999 !important;
+  background-color: #F4E8FF; 
+}
+
+body {
+  padding-top: 90px !important; /* push page down below header */
+}
+.hamburger {
+  display: block !important;
+  z-index: 100000 !important;
+}
+
 /* ------------------ HERO ------------------ */
 
 .hero-container {
