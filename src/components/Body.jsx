@@ -16,7 +16,7 @@ const Body = () => {
 
   const checkUser = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/profile", {
+      const res = await axios.get("https://devlink-backend-zt4c.onrender.com/profile", {
         withCredentials: true,
       });
 
@@ -33,7 +33,7 @@ const Body = () => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:8000/logout",
+        "https://devlink-backend-zt4c.onrender.com/logout",
         {},
         { withCredentials: true }
       );
