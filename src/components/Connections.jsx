@@ -11,7 +11,7 @@ const connections = useSelector((state) => state.connections);
   const fetchConnections = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8000/users/connection",
+        "https://devlink-backend-zt4c.onrender.com/users/connection",
         { withCredentials: true }
       );
       console.log("API RESPONSE =", res.data.data);
