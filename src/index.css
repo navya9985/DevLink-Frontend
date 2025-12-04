@@ -97,17 +97,40 @@
 /* ⛔ THE IMPORTANT PART WARNING */
 /* Many phones + Render stretch layouts.  
    So we set mobile mode at width < 1024px, not 768px */
-@media (max-width: 1024px) {
+/* -------------------------- */
+@media (max-width: 768px) {
   .links {
-    display: none !important;
+    display: none;       /* hide center links */
   }
 
   .buttons {
-    display: none !important;
+    display: none;       /* hide login button */
   }
 
   .hamburger {
-    display: block !important;
+    display: block;      /* show ☰ on tablet + mobile */
+  }
+}
+
+/* -------------------------- */
+/* SMALL MOBILES: BELOW 600px */
+/* -------------------------- */
+@media (max-width: 600px) {
+
+  .logo {
+    width: 30px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .hamburger {
+    font-size: 26px;
+  }
+
+  .header {
+    padding: 10px 12px;
   }
 }
 /* ------------------ HERO ------------------ */
