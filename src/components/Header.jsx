@@ -2,6 +2,7 @@ import { useState } from "react";
 import devlink from "../assets/devlink.png"
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "../header.css";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -12,7 +13,7 @@ const Header = () => {
 
       <div className="left">
         <img
-          src="/home/navya/Desktop/DevLink/Frontend/src/assets/image.png"
+          src={devlink}
           alt="logo"
           className="logo"
         />
