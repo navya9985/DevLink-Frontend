@@ -1,20 +1,18 @@
-/* HEADER */
+---------------- HEADER ------------------ */
+
 .header {
-  position: fixed;         /* FIX 1: make header fixed, not absolute */
-  top: 0;
-  width: 100%;
-  z-index: 9999 !important; /* FIX 2: keep header above hero */
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   padding: 14px 40px;
-  background-color: #F4E8FF;
+  background-color: #F4E8FF; /* Soft lavender */
   border-bottom: 1px solid #e9e9e9;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 20;
 }
 
-/* LEFT PART */
 .left {
   display: flex;
   align-items: center;
@@ -31,7 +29,6 @@
   color: #5A2AE0;
 }
 
-/* DESKTOP LINKS */
 .links a {
   margin: 0 16px;
   text-decoration: none;
@@ -44,7 +41,7 @@
   color: #7A43FF;
 }
 
-/* LOGIN BUTTON */
+
 .login {
   background-color: #fff;
   color: #5A2AE0;
@@ -52,6 +49,7 @@
   border-radius: 8px;
   border: 2px solid #5A2AE0;
   font-weight: 600;
+
   transition: 0.3s;
 }
 
@@ -60,32 +58,24 @@
   color: white;
 }
 
-/* HAMBURGER ICON */
 .hamburger {
   font-size: 28px;
   cursor: pointer;
+  display: none;
   color: #5A2AE0;
-
-  display: none;          /* hidden on desktop */
-  z-index: 10000 !important; /* FIX 3: ALWAYS ABOVE EVERYTHING */
 }
 
-/* MOBILE MENU */
 .mobile-menu {
-  position: fixed;        /* FIX 4: fix position on mobile */
+  position: absolute;
   top: 70px;
   right: 20px;
-
   background: #f4f0ff;
   padding: 20px;
-  width: 200px;
-
   border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-
-  z-index: 10001 !important; /* FIX 5 */
 }
 
 .mobile-menu a {
@@ -95,14 +85,13 @@
   font-weight: 500;
 }
 
-/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .links,
   .buttons {
-    display: none;        /* hide desktop menu */
+    display: none;
   }
 
   .hamburger {
-    display: block !important;  /* FIX 6: show hamburger ALWAYS on phones */
+    display: block;
   }
 }
