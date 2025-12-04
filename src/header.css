@@ -109,3 +109,21 @@
     display:block;
   }
 }
+
+.header {
+  z-index: 9999 !important;
+}
+
+.hamburger {
+  z-index: 99999 !important;
+  display: block !important;
+}
+
+/* Fix mobile menu visibility */
+@media (max-width: 768px) {
+  .mobile-menu {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+  }
+}
