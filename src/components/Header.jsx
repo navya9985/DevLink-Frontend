@@ -51,7 +51,7 @@ const Header = () => {
 
           &nbsp;
         <Link to="/login">
-  <button className="login" onClick={handlelogin}>Login</button>
+  <button className="login" >Login</button>
 </Link>
 
         </div>
