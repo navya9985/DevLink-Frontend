@@ -11,7 +11,7 @@ const BigFeedCard = ({ user }) => {
     try {
       // ✔ Correct API route (same style as request page)
       await axios.post(
-        `http://localhost:8000/request/review/${status}/${userid}`,
+        `https://devlink-backend-zt4c.onrender.com/request/review/${status}/${userid}`,
         {},
         { withCredentials: true }
       );
