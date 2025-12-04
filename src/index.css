@@ -1,4 +1,4 @@
-/* DESKTOP HEADER - ONE LINE */
+/* DESKTOP HEADER */
 .header {
   display: flex;
   justify-content: space-between;
@@ -48,59 +48,43 @@
   font-weight: 600;
 }
 
-/* ⭐ MOBILE LAYOUT STARTS HERE ⭐ */
+/* HAMBURGER ICON (MOBILE ONLY) */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #5A2AE0;
+}
+
+/* MOBILE MENU HIDDEN INITIALLY */
+.mobile-menu {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ⭐ MOBILE RULES ⭐ */
 @media (max-width: 600px) {
 
-  /* Header becomes vertical */
-  .header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-  }
-
-  /* Logo row */
-  .left {
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 8px;
-  }
-
-  .logo {
-    width: 32px;
-  }
-
-  .name {
-    font-size: 18px;
-  }
-
-  /* Links row (centered) */
-  .links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;      /* wraps nicely */
-    gap: 10px;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .links a {
-    font-size: 14px;
-  }
-
-  /* Login on NEXT row but right side */
+  /* HIDE normal links + login */
+  .links,
   .buttons {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;   /* moves login to right */
-    padding-right: 20px;
+    display: none;
   }
 
-  .login {
-    font-size: 14px;
-    padding: 6px 14px;
+  /* SHOW HAMBURGER */
+  .hamburger {
+    display: block;
   }
 }
+
 
 /* ------------------ HERO ------------------ */
 
