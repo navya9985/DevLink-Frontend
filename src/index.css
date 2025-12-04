@@ -71,19 +71,23 @@
 }
 
 /* ⭐ MOBILE RULES ⭐ */
+/* ⭐ MOBILE RULES ⭐ */
 @media (max-width: 600px) {
 
-  /* HIDE normal links + login */
+  /* hide desktop menu */
   .links,
   .buttons {
     display: none;
   }
 
-  /* SHOW HAMBURGER */
+  /* show hamburger inside the header on the right side */
   .hamburger {
     display: block;
+    margin-left: auto;      /* 👈 pushes hamburger to the right */
+    font-size: 32px;
   }
 }
+
 
 
 /* ------------------ HERO ------------------ */
