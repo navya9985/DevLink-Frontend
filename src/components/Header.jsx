@@ -2,7 +2,7 @@ import { useState } from "react";
 import devlink from "../assets/devlink.png"
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import "../header.css";
+import "./head.css";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
