@@ -2,22 +2,20 @@ import { useState } from "react";
 import devlink from "../assets/devlink.png"
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 const Header = () => {
-  const [showMenu, setShowMenu] = useState(false);
-  const user = useSelector((store) => store.user);
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <header className="header">
 
+      {/* LOGO + NAME */}
       <div className="left">
-        <img
-          src={devlink}
-          alt="logo"
-          className="logo"
-        />
+        <img src={devlink} alt="logo" className="logo" />
         <h2 className="name">DevLink</h2>
       </div>
 
+      {/* DESKTOP LINKS */}
       <nav className="links">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
@@ -25,33 +23,29 @@ const Header = () => {
         <a href="#contact">Contact</a>
       </nav>
 
-
-      
+      {/* DESKTOP LOGIN */}
       <div className="buttons">
-      <Link to="/login">
-  <button className="login">Login</button>
-</Link>
-
+        <Link to="/login">
+          <button className="login">Login</button>
+        </Link>
       </div>
 
-
-      <div className="hamburger" onClick={() => setShowMenu(!showMenu)}>
-     
+      {/* MOBILE HAMBURGER */}
+      <div className="hamburger" onClick={() => setOpenMenu(!openMenu)}>
         ☰
       </div>
 
-      {showMenu && (
+      {/* MOBILE MENU */}
+      {openMenu && (
         <div className="mobile-menu">
-          <a href="#home" onClick={() => setShowMenu(false)}>Home</a>
-          <a href="#services" onClick={() => setShowMenu(false)}>Services</a>
-          <a href="#about" onClick={() => setShowMenu(false)}>About</a>
-          <a href="#contact" onClick={() => setShowMenu(false)}>Contact</a>
+          <a href="#home" onClick={() => setOpenMenu(false)}>Home</a>
+          <a href="#services" onClick={() => setOpenMenu(false)}>Services</a>
+          <a href="#about" onClick={() => setOpenMenu(false)}>About</a>
+          <a href="#contact" onClick={() => setOpenMenu(false)}>Contact</a>
 
-          &nbsp;
-        <Link to="/login">
-  <button className="login" >Login</button>
-</Link>
-
+          <Link to="/login">
+            <button className="login" onClick={() => setOpenMenu(false)}>Login</button>
+          </Link>
         </div>
       )}
 
