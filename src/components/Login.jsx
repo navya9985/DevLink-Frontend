@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8000/login",
+        "https://devlink-backend-zt4c.onrender.com/login",
         {
           emailId: email,
           password: password
@@ -45,7 +45,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8000/signup",
+        "https://devlink-backend-zt4c.onrender.com/signup",
         {
           firstName,
           lastName,
