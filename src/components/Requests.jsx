@@ -10,7 +10,7 @@ const Requests = () => {
   const fetchRequests = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:9000/users/request",   // your API
+        "https://devlink-backend-zt4c.onrender.com/users/request",   // your API
         { withCredentials: true }
       );
 
